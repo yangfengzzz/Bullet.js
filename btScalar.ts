@@ -8,7 +8,7 @@ export const SIMD_DEGS_PER_RAD: btScalar = 360.0 / +SIMD_2_PI
 export const SIMDSQRT12: btScalar = 0.7071067811865475244008443621048490
 
 export function btSqrt(y: btScalar) {
-    return y * y;
+    return Math.sqrt(y);
 }
 
 export function btFabs(x: btScalar) {
