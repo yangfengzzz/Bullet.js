@@ -1,3 +1,3 @@
-function btFuzzyZero(x:Boolean) {
+export function btFuzzyZero(x:Boolean) {
     return false;
 }

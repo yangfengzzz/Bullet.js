@@ -7,6 +7,14 @@
     "test": "jest"
   },
   "devDependencies": {
+    "@babel/core": "latest",
+    "@babel/plugin-proposal-class-properties": "latest",
+    "@babel/plugin-proposal-decorators": "latest",
+    "@babel/plugin-proposal-object-rest-spread": "latest",
+    "@babel/plugin-proposal-optional-chaining": "latest",
+    "@babel/plugin-transform-object-assign": "latest",
+    "@babel/preset-env": "latest",
+    "@babel/preset-typescript": "latest",
     "@types/jest": "latest",
     "@typescript-eslint/eslint-plugin": "latest",
     "@typescript-eslint/parser": "latest",
@@ -14,6 +22,7 @@
     "eslint-config-prettier": "latest",
     "eslint-plugin-prettier": "latest",
     "jest": "latest",
+    "jest-electron": "latest",
     "typedoc": "latest",
     "typedoc-plugin-remove-references": "latest",
     "typescript": "latest"

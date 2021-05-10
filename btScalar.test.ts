@@ -1,4 +1,3 @@
-// @ts-ignore
 import {btFuzzyZero} from "./btScalar"
 
 describe("Scalar Test", function () {
