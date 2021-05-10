@@ -6,6 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-prettier": "latest",
+    "eslint-plugin-prettier": "latest",
+    "jest": "latest",
+    "typedoc": "latest",
+    "typedoc-plugin-remove-references": "latest",
+    "typescript": "latest"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC"
