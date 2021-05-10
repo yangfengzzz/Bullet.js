@@ -4,7 +4,7 @@ const path = require("path");
 fs.rmdirSync(path.join(process.cwd(), "api"), { recursive: true });
 
 module.exports = {
-  name: "Oasis Engine",
+  name: "Bullet.js",
   mode: "modules",
   out: `api/`,
   theme: "./node_modules/@oasis-engine/typedoc-theme/bin/default",
