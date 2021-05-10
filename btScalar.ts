@@ -1,4 +1,4 @@
-type btScalar = number
+export type btScalar = number
 
 export const SIMD_PI: btScalar = 3.1415926535897932384626433832795029;
 export const SIMD_2_PI: btScalar = 2.0 * +SIMD_PI;
