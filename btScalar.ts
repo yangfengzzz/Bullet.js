@@ -1,5 +1,6 @@
 export type btScalar = number
 
+export const BT_LARGE_FLOAT: btScalar = Number.MAX_VALUE;
 export const SIMD_PI: btScalar = 3.1415926535897932384626433832795029;
 export const SIMD_2_PI: btScalar = 2.0 * +SIMD_PI;
 export const SIMD_HALF_PI: btScalar = +SIMD_PI * 0.5

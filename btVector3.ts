@@ -453,3 +453,86 @@ function lerp(v1: btVector3, v2: btVector3, t: btScalar.btScalar) {
     return v1.lerp(v2, t);
 }
 
+//----------------------------------------------------------------------------------------------------------------------
+class btVector4 extends btVector3 {
+    constructor()
+    constructor(x: btScalar.btScalar, y: btScalar.btScalar, z: btScalar.btScalar, w: btScalar.btScalar)
+
+    constructor(_x?: btScalar.btScalar, _y?: btScalar.btScalar, _z?: btScalar.btScalar, _w?: btScalar.btScalar) {
+        super(_x, _y, _z)
+        this.m_floats[3] = _w;
+    }
+
+    absolute4() {
+        return new btVector4(btScalar.btFabs(this.m_floats[0]), btScalar.btFabs(this.m_floats[1]),
+            btScalar.btFabs(this.m_floats[2]), btScalar.btFabs(this.m_floats[3]));
+    }
+
+    getW() {
+        return this.m_floats[3];
+    }
+
+    maxAxis4() {
+        let maxIndex = -1;
+        let maxVal = -btScalar.BT_LARGE_FLOAT;
+        if (this.m_floats[0] > maxVal) {
+            maxIndex = 0;
+            maxVal = this.m_floats[0];
+        }
+        if (this.m_floats[1] > maxVal) {
+            maxIndex = 1;
+            maxVal = this.m_floats[1];
+        }
+        if (this.m_floats[2] > maxVal) {
+            maxIndex = 2;
+            maxVal = this.m_floats[2];
+        }
+        if (this.m_floats[3] > maxVal) {
+            maxIndex = 3;
+        }
+
+        return maxIndex;
+    }
+
+    minAxis4() {
+        let
+            minIndex = -1;
+        let
+            minVal = btScalar.BT_LARGE_FLOAT;
+        if (this.m_floats[0] < minVal) {
+            minIndex = 0;
+            minVal = this.m_floats[0];
+        }
+        if (this.m_floats[1] < minVal) {
+            minIndex = 1;
+            minVal = this.m_floats[1];
+        }
+        if (this.m_floats[2] < minVal) {
+            minIndex = 2;
+            minVal = this.m_floats[2];
+        }
+        if (this.m_floats[3] < minVal) {
+            minIndex = 3;
+        }
+
+        return minIndex;
+    }
+
+    closestAxis4() {
+        return this.absolute4().maxAxis4();
+    }
+
+    /**@brief Set the values
+     * @param _x Value of x
+     * @param _y Value of y
+     * @param _z Value of z
+     * @param _w Value of w
+     */
+    setValue4(_x: btScalar.btScalar, _y: btScalar.btScalar, _z: btScalar.btScalar, _w: btScalar.btScalar) {
+        this.m_floats[0] = _x;
+        this.m_floats[1] = _y;
+        this.m_floats[2] = _z;
+        this.m_floats[3] = _w;
+    }
+}
+
